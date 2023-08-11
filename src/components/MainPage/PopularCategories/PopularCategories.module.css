@@ -1,0 +1,24 @@
+.popularCategories {
+    margin-bottom: 75px;
+    margin-top: 120px;
+}
+
+.title {
+    margin-bottom: 40px;
+    margin-top: 0;
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 414px) {
+    .categories {
+        justify-content: center;
+    }
+}

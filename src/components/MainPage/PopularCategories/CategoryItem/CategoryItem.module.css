@@ -1,0 +1,40 @@
+.card {
+    border-radius: 10px;
+    border: 2px solid rgba(218, 211, 211, 0.40);
+
+    /* Drop shadow blur */
+    box-shadow: 0px 2px 8px 2px #C4C4C4;
+    width: 29.71%;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+
+.card img {
+    aspect-ratio: 350/212;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card h4 {
+    color: var(--dark-grey, #505050);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .card {
+        width: 90%;
+    }
+}

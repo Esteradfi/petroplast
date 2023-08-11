@@ -1,0 +1,52 @@
+.title {
+    margin-bottom: 40px;
+    margin-top: 0;
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.item img {
+    margin-right: 70px;
+}
+
+.subtitle {
+    color: var(--text-black, #000);
+
+    /* Text/Headline 24pt */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.paragraph {
+    color: var(--text-black, #000);
+
+    /* Text regular 24 pt */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 0;
+}
+
+@media screen and (max-width: 540px) {
+    .item img {
+        width: 20%;
+        margin-right: 20px;
+    }
+    .subtitle, .paragraph {
+        font-size: 20px;
+    }
+}

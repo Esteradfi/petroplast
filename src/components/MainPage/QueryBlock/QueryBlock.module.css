@@ -1,0 +1,31 @@
+.QueryBlock {
+    margin: 100px auto !important;
+}
+
+.title {
+    margin-bottom: 40px;
+    margin-top: 0;
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.button {
+    border-radius: 20px;
+    background: var(--red-buttons-and-text, #E51428);
+    color: var(--white, #FFF);
+    font-size: 24px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    padding: 15px 34px;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: var(--bright-red, #FF0018);
+}
+
+.button:active {
+    background: var(--dark-red, #CA1527);
+}
