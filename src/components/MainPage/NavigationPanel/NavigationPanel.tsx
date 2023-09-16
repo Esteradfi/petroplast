@@ -37,12 +37,6 @@ const NavigationPanel = () => {
                 </span>
             </Link>
             <Link className={styles.item} to="/">
-                <img src={handsImage} alt="Иконка" />
-                <span>
-                    Контрагентам
-                </span>
-            </Link>
-            <Link className={styles.item} to="/">
                 <img src={discountImage} alt="Иконка" />
                 <span>
                     Акции

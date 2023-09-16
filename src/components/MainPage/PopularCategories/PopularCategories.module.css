@@ -1,6 +1,13 @@
 .popularCategories {
-    margin-bottom: 75px;
-    margin-top: 120px;
+    margin-bottom: 75px !important;
+    margin-top: 120px !important;
+}
+
+@media screen and (max-width: 670px) {
+    .popularCategories {
+        margin-bottom: 30px !important;
+        margin-top: 50px !important;
+    }
 }
 
 .title {
@@ -14,7 +21,31 @@
 .categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 4.947%;
+}
+
+@media screen and (max-width: 700px) {
+    .categories {
+        gap: 8.8%;
+    }
+}
+
+@media screen and (max-width: 641px) {
+    .categories {
+        gap: 8.5%;
+    }
+}
+
+@media screen and (max-width: 519px) {
+    .categories {
+        gap: 8.2%;
+    }
+}
+
+@media screen and (max-width: 439px) {
+    .categories {
+        gap: 8%;
+    }
 }
 
 @media screen and (max-width: 414px) {

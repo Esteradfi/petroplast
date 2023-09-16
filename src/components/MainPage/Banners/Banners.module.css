@@ -1,0 +1,9 @@
+.image {
+    width: 100%;
+    aspect-ratio: 1600/200;
+    object-fit: contain;
+}
+
+.slider {
+    position: relative;
+}

@@ -1,3 +1,35 @@
-.App {
+.popup {
+    position: absolute;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+}
 
+.popup h2 {
+    margin: 0;
+}
+
+.popup div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup button {
+    background: red;
+    border: none;
+    outline: none;
+    min-width: 150px;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 16px;
+}
+
+.lock {
+    overflow-y: hidden;
+    max-height: 100vh;
 }
