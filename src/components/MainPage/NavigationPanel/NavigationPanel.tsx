@@ -36,19 +36,19 @@ const NavigationPanel = () => {
                     <strong>Прайс-лист</strong> всей продукции
                 </span>
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/stock">
                 <img src={discountImage} alt="Иконка" />
                 <span>
                     Акции
                 </span>
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/contract">
                 <img src={documentsImage} alt="Иконка" />
                 <span>
                     Заключить договор
                 </span>
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/order-production">
                 <img src={personImage} alt="Иконка" />
                 <span>
                     Производство на заказ

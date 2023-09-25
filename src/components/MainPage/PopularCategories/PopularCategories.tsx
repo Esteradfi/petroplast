@@ -10,10 +10,6 @@ const PopularCategories = () => {
 
     let categoriesItems = categoriesList.map((el: CategoriesItem) => <CategoryItem key={el._id} {...el} />);
 
-    useEffect(() => {
-        dispatch(getCategoriesThunk());
-    }, [])
-
     return (
         <article className={"container " + styles.popularCategories}>
             <h3 className={styles.title}>

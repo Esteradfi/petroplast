@@ -1,0 +1,94 @@
+.page {
+    margin-top: 30px !important;
+    margin-bottom: 120px !important;
+}
+
+.buttonArticle {
+    margin-top: 60px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.header img {
+    margin-right: 15px;
+}
+
+.title {
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--text-black, #000);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 28px */
+}
+
+.text {
+    color: var(--text-black, #000);
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 25.2px */
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.text strong {
+    color: var(--text-black, #000);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.buttonTitle {
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.button {
+    border-radius: 20px;
+    background: var(--Red-buttons-and-text, #E51428);
+
+    /* Drop shadow default */
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    color: var(--White, #FFF);
+
+    /* Button text big */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 31.2px */
+    padding: 15px 34px;
+    outline: none;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: var(--Bright-red, #FF0018);
+}
+
+.button:active {
+    background: var(--Dark-Red, #CA1527);
+}

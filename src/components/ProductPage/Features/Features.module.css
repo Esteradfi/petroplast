@@ -1,0 +1,111 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 100px auto !important;
+    box-sizing: border-box;
+}
+
+.featuresBlock:first-child {
+    width: 30%;
+}
+
+.featuresBlock:last-child {
+    width: 65%;
+}
+
+.title {
+    color: var(--text-black, #000);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 0 30px;
+}
+
+.featuresList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.featuresItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    color: var(--Dark-grey, #505050);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+}
+
+.featuresItem span:first-child {
+    margin-right: 5px;
+}
+
+.featuresItem span:last-child {
+    text-align: right;
+}
+
+.description {
+    color: var(--Dark-grey, #505050);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+}
+
+.moreFeatures {
+    color: var(--Blue, #1400FF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1035px) {
+    .featuresBlock:first-child {
+        width: 40%;
+    }
+
+    .featuresBlock:last-child {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .featuresBlock:first-child {
+        width: 50%;
+    }
+
+    .featuresBlock:last-child {
+        width: 45%;
+    }
+
+    .featuresItem, .moreFeatures, .description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .features {
+        flex-direction: column-reverse;
+    }
+
+    .featuresBlock:first-child {
+        width: 100%;
+    }
+
+    .featuresBlock:last-child {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .featuresItem, .moreFeatures, .description {
+        font-size: 14px;
+    }
+}

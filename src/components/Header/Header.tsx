@@ -20,7 +20,7 @@ const Header = () => {
                     </div>
                     <div className={styles.item}>
                         <img className={styles.icon} src={location} alt=" Адрес" />
-                        <Link to="https://yandex.ru/maps/102557/sestroretsk/house/ulitsa_voskova_2ats/ZkAYfwFkTUQGQFhqfXx4dnlnZw==/?ll=29.964544%2C60.097642&z=19">
+                        <Link to="https://yandex.ru/maps/102557/sestroretsk/?ll=29.964544%2C60.097642&mode=poi&poi%5Bpoint%5D=29.964406%2C60.097590&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1073073345&z=19">
                             Санкт-Петербург, г. Сестрорецк, ул. Воскова, д. 2 лит. Т
                         </Link>
                     </div>
@@ -30,7 +30,7 @@ const Header = () => {
                 <span className={styles.item}>
                     Производство и оптовая продажа хозяйственных товаров
                 </span>
-                <img className={styles.item} src={logo} alt="Логотип" />
+                <Link to="/" className={styles.item}><img className={styles.logo} src={logo} alt="Логотип" /></Link>
                 <div className={styles.item}>
                     <div className={styles.link}>
                         <img src={phone} alt="Телефон" />

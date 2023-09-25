@@ -5,6 +5,7 @@ import $api from '../http';
 
 export interface CategoriesState {
     categoriesList: Array<CategoriesItem> | [],
+    isFetching: boolean
 };
 
 export type CategoriesItem = {
@@ -17,6 +18,7 @@ export type CategoriesItem = {
 
 const initialState: CategoriesState = {
     categoriesList: [],
+    isFetching: true
 };
 
 
@@ -36,8 +38,7 @@ export const CategoriesSlice = createSlice({
     name: "Categories",
     initialState,
     reducers: {
-        changeTitle: (state, action: PayloadAction<string>) => {
-
+        changeSelectedCategory: (state, action: PayloadAction<string>) => {
         }
     },
     extraReducers: (builder) => {
@@ -45,13 +46,15 @@ export const CategoriesSlice = createSlice({
         .addCase(getCategoriesThunk.fulfilled, (state, action) => {
             if(action.payload) {
                 state.categoriesList = action.payload.reverse();
+                console.log(state.categoriesList)
             } else {
                 state.categoriesList = action.payload;
             }
+            state.isFetching = false;
         })
     },
 });
 
 export default CategoriesSlice.reducer;
 
-export const {changeTitle} = CategoriesSlice.actions;
+export const {} = CategoriesSlice.actions;

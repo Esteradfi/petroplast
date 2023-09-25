@@ -1,13 +1,14 @@
 import styles from "./CategoryItem.module.css";
+import {NavLink} from "react-router-dom";
 
 const CategoryItem = ({...el}) => {
     return (
-        <div className={styles.card}>
+        <NavLink to={"/" + el.name} className={styles.card}>
             <img src={el.image} alt="Категория" />
             <h4>
                 {el.name}
             </h4>
-        </div>
+        </NavLink>
     )
 }
 

@@ -1,0 +1,123 @@
+.name {
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 30px;
+    margin-bottom: 37px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column:first-child {
+    width: 60%;
+}
+
+.column:last-child {
+    width: 30%;
+}
+
+.imagesColumn {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .columns {
+        flex-direction: column;
+    }
+    .column:first-child {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .column:last-child {
+        width: 100%;
+    }
+}
+
+.prices {
+    margin-bottom: 30px;
+}
+
+.prices h3 {
+    color: var(--text-grey, #505050);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.prices strong {
+    color: var(--Black, #000);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.queryButton {
+    border-radius: 20px;
+    background: var(--Red-buttons-and-text, #E51428);
+    width: 100%;
+    /* Drop shadow default */
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    color: var(--White, #FFF);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 31.2px */
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    margin-bottom: 60px;
+}
+
+.queryButton:hover {
+    background: var(--Bright-red, #FF0018);
+}
+
+.queryButton:active {
+    background: var(--Dark-Red, #CA1527);
+}
+
+.subtitle {
+    color: var(--text-black, #000);
+    margin-bottom: 23px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+}
+
+.infoButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.infoButton img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.infoButton h5 {
+    margin: 0;
+    color: var(--Blue, #1400FF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+    text-align: left;
+}

@@ -1,0 +1,27 @@
+.header {
+    margin: 30px auto 40px !important;
+}
+
+.header h2 {
+    color: var(--text-black, #000);
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.emptyBlock {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: var(--text-black, #000);
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

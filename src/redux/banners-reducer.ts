@@ -3,6 +3,7 @@ import $api from '../http';
 
 export interface BannersState {
     bannersList: Array<Banner> | [],
+    isFetching: boolean
 }
 export type BannerImage = {
     image: string;
@@ -16,6 +17,7 @@ export type Banner = {
 
 const initialState: BannersState = {
     bannersList: [],
+    isFetching: true
 }
 
 export const getBannersThunk = createAsyncThunk(
@@ -40,6 +42,7 @@ export const BannersSlice = createSlice({
         builder
             .addCase(getBannersThunk.fulfilled, (state, action) => {
                 state.bannersList = action.payload;
+                state.isFetching = false
             })
     }
 })

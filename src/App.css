@@ -33,3 +33,14 @@
     overflow-y: hidden;
     max-height: 100vh;
 }
+
+.loaderBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.loaderBlock img {
+    margin-bottom: 30px;
+}

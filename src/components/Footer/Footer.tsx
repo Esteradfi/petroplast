@@ -27,7 +27,7 @@ const Footer = () => {
                 <div>
                     1998–{currentYear} Официальный сайт. Все права защищены.
                 </div>
-                <Link to="/">
+                <Link to="/politika-konfidencialnosti">
                     Политика конфиденциальности
                 </Link>
             </div>
