@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.32f1d29b.css",
-    "main.js": "./static/js/main.25ad1b1b.js",
+    "main.css": "./static/css/main.1f886467.css",
+    "main.js": "./static/js/main.9cc642b3.js",
     "static/media/404.jpg": "./static/media/404.a0b7d9d6e4824051ad16.jpg",
     "static/media/inter-latin-ext-700-normal.woff": "./static/media/inter-latin-ext-700-normal.1a4eb8333220ffec1b2d.woff",
     "static/media/montserrat-latin-wght-normal.woff2": "./static/media/montserrat-latin-wght-normal.b66f2d18f66f15c3ac56.woff2",
@@ -32,8 +32,10 @@
     "static/media/hands.svg": "./static/media/hands.f4045ac37869311dc4aa1696aca599ae.svg",
     "static/media/percent.svg": "./static/media/percent.b8f1b4edbeafd37f833bdf9d47976805.svg",
     "static/media/phone.svg": "./static/media/phone.4ae94a559c96dbb4d264438b1b10da1f.svg",
+    "static/media/clock.svg": "./static/media/clock.197d6f18de76565fb5fd7621fe4ac90d.svg",
     "static/media/case.svg": "./static/media/case.75b5afb30a81eebed41a8e63087980e2.svg",
     "static/media/burger.svg": "./static/media/burger.cfc1dd443fa55c5544246db42e5841b5.svg",
+    "static/media/house.svg": "./static/media/house.9f2cb31126b76c5ae7ace19b6820d79c.svg",
     "static/media/label.svg": "./static/media/label.d1a3e7c8b27d526ec2b41c51982e17d2.svg",
     "static/media/lock.svg": "./static/media/lock.b273af617d0aeedfe213f21eb8048935.svg",
     "static/media/documents.svg": "./static/media/documents.8501eaca6e78c89968a66e220df51d94.svg",
@@ -43,13 +45,14 @@
     "static/media/workTime.svg": "./static/media/workTime.8750ea3881527e5e19edcf6d1f2e55de.svg",
     "static/media/red-circle.svg": "./static/media/red-circle.2e48a852ad138b497a2e485a7b3eab89.svg",
     "static/media/delivery-rus.svg": "./static/media/delivery-rus.f66289857b561eb6c383e3c9c822016f.svg",
+    "static/media/mail.svg": "./static/media/mail.b3c0452223124a5c25afcd36b6593347.svg",
     "index.html": "./index.html",
     "static/media/close.svg": "./static/media/close.7c66cecd33f368399ee25df778170b96.svg",
-    "main.32f1d29b.css.map": "./static/css/main.32f1d29b.css.map",
-    "main.25ad1b1b.js.map": "./static/js/main.25ad1b1b.js.map"
+    "main.1f886467.css.map": "./static/css/main.1f886467.css.map",
+    "main.9cc642b3.js.map": "./static/js/main.9cc642b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.32f1d29b.css",
-    "static/js/main.25ad1b1b.js"
+    "static/css/main.1f886467.css",
+    "static/js/main.9cc642b3.js"
   ]
 }
