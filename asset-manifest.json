@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "./static/css/main.d72db13f.css",
-    "main.js": "./static/js/main.ce2f2ff0.js",
+    "main.css": "./static/css/main.0beb581a.css",
+    "main.js": "./static/js/main.d24274d7.js",
+    "static/media/small-logo.jpg": "./static/media/small-logo.d179505e250f9beeb82d.jpg",
+    "static/media/logo.jpg": "./static/media/logo.fefd27d9d2995c932299.jpg",
     "static/media/404.jpg": "./static/media/404.a0b7d9d6e4824051ad16.jpg",
     "static/media/inter-latin-ext-700-normal.woff": "./static/media/inter-latin-ext-700-normal.1a4eb8333220ffec1b2d.woff",
     "static/media/montserrat-latin-wght-normal.woff2": "./static/media/montserrat-latin-wght-normal.b66f2d18f66f15c3ac56.woff2",
-    "static/media/logo.png": "./static/media/logo.ea58111df57d24a3fefa.png",
     "static/media/montserrat-latin-ext-wght-normal.woff2": "./static/media/montserrat-latin-ext-wght-normal.9f73369162c4382215d4.woff2",
     "static/media/montserrat-cyrillic-ext-wght-normal.woff2": "./static/media/montserrat-cyrillic-ext-wght-normal.639b3c91831427d83cd3.woff2",
     "static/media/inter-latin-700-normal.woff": "./static/media/inter-latin-700-normal.6d95ba525c9d7b725600.woff",
@@ -49,11 +50,11 @@
     "static/media/mail.svg": "./static/media/mail.b3c0452223124a5c25afcd36b6593347.svg",
     "index.html": "./index.html",
     "static/media/close.svg": "./static/media/close.7c66cecd33f368399ee25df778170b96.svg",
-    "main.d72db13f.css.map": "./static/css/main.d72db13f.css.map",
-    "main.ce2f2ff0.js.map": "./static/js/main.ce2f2ff0.js.map"
+    "main.0beb581a.css.map": "./static/css/main.0beb581a.css.map",
+    "main.d24274d7.js.map": "./static/js/main.d24274d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d72db13f.css",
-    "static/js/main.ce2f2ff0.js"
+    "static/css/main.0beb581a.css",
+    "static/js/main.d24274d7.js"
   ]
 }
