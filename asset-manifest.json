@@ -1,9 +1,12 @@
 {
   "files": {
-    "main.css": "./static/css/main.de2cacf6.css",
-    "main.js": "./static/js/main.8ba36fe0.js",
+    "main.css": "./static/css/main.07429d2b.css",
+    "main.js": "./static/js/main.ba4ee347.js",
+    "static/media/cer3.png": "./static/media/cer3.a2700baa93c31498a514.png",
     "static/media/small-logo.jpg": "./static/media/small-logo.d179505e250f9beeb82d.jpg",
+    "static/media/cer1.png": "./static/media/cer1.dede68cbfdaf152d6b23.png",
     "static/media/logo.jpg": "./static/media/logo.fefd27d9d2995c932299.jpg",
+    "static/media/cer2.png": "./static/media/cer2.478410fdf510a5cda58e.png",
     "static/media/404.jpg": "./static/media/404.a0b7d9d6e4824051ad16.jpg",
     "static/media/inter-latin-ext-700-normal.woff": "./static/media/inter-latin-ext-700-normal.1a4eb8333220ffec1b2d.woff",
     "static/media/montserrat-latin-wght-normal.woff2": "./static/media/montserrat-latin-wght-normal.b66f2d18f66f15c3ac56.woff2",
@@ -27,6 +30,7 @@
     "static/media/inter-vietnamese-700-normal.woff2": "./static/media/inter-vietnamese-700-normal.3d836ea0c2480ab12b4b.woff2",
     "static/media/person.svg": "./static/media/person.5454e51d927c8a5277555448dfd6169e.svg",
     "static/media/loader.svg": "./static/media/loader.893ea8fde2b5216497b09fab66c6a041.svg",
+    "static/media/medal.svg": "./static/media/medal.5d7f8d9d3abd1e88d3ea54c4f00f6d46.svg",
     "static/media/deliveryFill.svg": "./static/media/deliveryFill.6fdc66ff01b28206f16e3c6327505cdc.svg",
     "static/media/pickup.svg": "./static/media/pickup.213e4ecf7508701d6cde6bd39ddfd34c.svg",
     "static/media/hands.svg": "./static/media/hands.f4045ac37869311dc4aa1696aca599ae.svg",
@@ -45,16 +49,17 @@
     "static/media/discount.svg": "./static/media/discount.74d0a3d437db5431a7f97300dd15aba8.svg",
     "static/media/workTime.svg": "./static/media/workTime.8750ea3881527e5e19edcf6d1f2e55de.svg",
     "static/media/arrow.svg": "./static/media/arrow.b111b3bef9384f6c628159ae71e070fe.svg",
+    "static/media/payment.svg": "./static/media/payment.0e45c6fa92432338b96f1fe7daef00fc.svg",
     "static/media/red-circle.svg": "./static/media/red-circle.2e48a852ad138b497a2e485a7b3eab89.svg",
     "static/media/delivery-rus.svg": "./static/media/delivery-rus.f66289857b561eb6c383e3c9c822016f.svg",
     "static/media/mail.svg": "./static/media/mail.b3c0452223124a5c25afcd36b6593347.svg",
     "static/media/cross.svg": "./static/media/cross.72b93aadaca3dee4874d35cb5c957085.svg",
     "static/media/close.svg": "./static/media/close.7c66cecd33f368399ee25df778170b96.svg",
-    "main.de2cacf6.css.map": "./static/css/main.de2cacf6.css.map",
-    "main.8ba36fe0.js.map": "./static/js/main.8ba36fe0.js.map"
+    "main.07429d2b.css.map": "./static/css/main.07429d2b.css.map",
+    "main.ba4ee347.js.map": "./static/js/main.ba4ee347.js.map"
   },
   "entrypoints": [
-    "static/css/main.de2cacf6.css",
-    "static/js/main.8ba36fe0.js"
+    "static/css/main.07429d2b.css",
+    "static/js/main.ba4ee347.js"
   ]
 }
