@@ -1,9 +1,28 @@
 import styles from "./OrderProduction.module.css";
 import image from "./../../assets/icons/navigate/person.svg";
+import {NavLink} from "react-router-dom";
+import arrow from "../../assets/icons/arrow.svg";
+import {changeIsOpen, setIsQueryModal} from "../../redux/modal-reducer";
+import {useAppDispatch} from "../../redux/hooks";
 
 const OrderProduction = () => {
+    const dispatch = useAppDispatch();
+
+    const openQueryModal = () => {
+        dispatch(changeIsOpen(true));
+        dispatch(setIsQueryModal(true));
+    }
     return (
         <section className={"container " + styles.orderProduction}>
+            <article className={"breadcrumbs"}>
+                <NavLink to="/">
+                    Меню
+                </NavLink>
+                <img src={arrow} alt="Стрелка"/>
+                <NavLink to="/order-production">
+                    Производство на заказ
+                </NavLink>
+            </article>
             <div className={styles.titleBlock}>
                 <img src={image} alt="Пункт"/>
                 <h2 className={styles.title}>
@@ -21,7 +40,7 @@ const OrderProduction = () => {
             <h2 className={styles.title}>
                 Оставьте заявку и мы Вам позвоним!
             </h2>
-            <button className={styles.button}>
+            <button onClick={openQueryModal} className={styles.button}>
                 Оставить заявку
             </button>
         </section>

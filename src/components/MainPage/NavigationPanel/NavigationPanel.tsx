@@ -12,25 +12,25 @@ import styles from "./NavigationPanel.module.css";
 const NavigationPanel = () => {
     return (
         <nav className={"container " + styles.nav}>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/about">
                 <img src={caseImage} alt="Иконка" />
                 <span>
                     О компании
                 </span>
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/contacts">
                 <img src={phoneImage} alt="Иконка" />
                 <span>
                     Контакты
                 </span>
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/delivery">
                 <img src={deliveryImage} alt="Иконка" />
                 <span>
-                    Доставка и оплата
+                    Доставка <br/> и оплата
                 </span>
             </Link>
-            <Link className={styles.item} to="/">
+            <Link className={styles.item} to="/price-list">
                 <img src={labelImage} alt="Иконка" />
                 <span>
                     <strong>Прайс-лист</strong> всей продукции

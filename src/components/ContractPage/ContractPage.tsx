@@ -2,10 +2,30 @@ import styles from "./ContractPage.module.css";
 import docs from "./../../assets/icons/navigate/documents.svg";
 import hands from "./../../assets/icons/navigate/hands.svg";
 import dot from "./../../assets/icons/dot.svg";
+import {NavLink} from "react-router-dom";
+import arrow from "../../assets/icons/arrow.svg";
+import {useAppDispatch} from "../../redux/hooks";
+import {changeIsOpen, setIsQueryModal} from "../../redux/modal-reducer";
 
 const ContractPage = () => {
+    const dispatch = useAppDispatch();
+
+    const openQueryModal = () => {
+        dispatch(changeIsOpen(true));
+        dispatch(setIsQueryModal(true));
+    }
+
     return (
         <section className={"container " + styles.page}>
+            <article className={"breadcrumbs"}>
+                <NavLink to="/">
+                    Меню
+                </NavLink>
+                <img src={arrow} alt="Стрелка"/>
+                <NavLink to="/contract">
+                    Заключить договор
+                </NavLink>
+            </article>
             <article>
                 <header className={styles.header}>
                     <img src={docs} alt="Договор"/>
@@ -61,7 +81,7 @@ const ContractPage = () => {
                 <h3 className={styles.buttonTitle}>
                     Оставьте заявку и мы Вам позвоним!
                 </h3>
-                <button className={styles.button}>
+                <button onClick={openQueryModal} className={styles.button}>
                     Оставить заявку
                 </button>
             </article>

@@ -9,7 +9,7 @@ const VolumeGroup = ({...el}) => {
         <div className={styles.group}>
             <h3 className={styles.volumeTitle}>
                 {
-                    el.group[0].volume > 1 ? el.group[0].volume + " л" : el.group[0].volume > 0 && el.group[0].volume < 1 ? el.group[0].volume * 1000 + " мл" : "Без ёмкости"
+                    el.group[0].volume > 1 ? el.group[0].volume + " л" : el.group[0].volume > 0 && el.group[0].volume < 1 ? el.group[0].volume * 1000 + " мл" : null
                 }
             </h3>
             <div className={styles.items}>

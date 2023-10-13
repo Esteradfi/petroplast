@@ -1,0 +1,80 @@
+.articleMap {
+    margin-bottom: 120px;
+}
+
+.title {
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.linkBlock, .linkSubBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linkBlock {
+    margin-bottom: 30px;
+}
+
+.linkBlock h3, .linkBlock p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.linkBlock p {
+    width: 80%;
+    color: var(--text-black, #000);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+}
+
+@media screen and (max-width: 1040px) {
+    .linkBlock p {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .linkBlock p {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .linkBlock {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .linkSubBlock {
+        margin-bottom: 15px;
+    }
+    .linkBlock p {
+        width: 100%;
+    }
+}
+
+.linkIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.linkName {
+    color: var(--text-black, #000);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.link {
+    color: var(--Blue, #1400FF);
+}

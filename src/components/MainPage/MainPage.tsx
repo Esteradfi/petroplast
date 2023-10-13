@@ -10,6 +10,7 @@ import styles from "./MainPage.module.css";
 
 const MainPage = () => {
     let banners = useAppSelector(state => state.banners.bannersList);
+    let categories = useAppSelector(state => state.categories.categoriesList);
 
     return (
         <section>
@@ -20,7 +21,9 @@ const MainPage = () => {
                         <img className={stylesBanner.image} src={banners[0].links[0]} alt="Баннер"/>
                         : <Banners {...[banners]} />
             }
-            <PopularCategories/>
+            {
+                !categories || categories.length === 0 ? null : <PopularCategories/>
+            }
             <PrivilegeBlock/>
             <QueryBlock/>
         </section>

@@ -40,6 +40,10 @@
     line-height: 130%; /* 23.4px */
 }
 
+.colors {
+    max-width: 60%;
+}
+
 .featuresItem span:first-child {
     margin-right: 5px;
 }

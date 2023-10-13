@@ -13,7 +13,7 @@ const Banners = (props) => {
     </SwiperSlide>);
 
     return (
-        <div className={styles.slider}>
+        <div className={"container " + styles.slider}>
             <Swiper loop={true} navigation={true}
                     autoplay={{
                         delay: 5000,

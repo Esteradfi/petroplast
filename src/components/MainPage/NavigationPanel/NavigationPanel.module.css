@@ -26,6 +26,15 @@
     align-items: center;
     margin-bottom: 25px;
     width: 15%;
+    transition: 0.3s ease;
+}
+
+.item:hover, .item:hover strong {
+    color: var(--Bright-red, #FF0018);
+}
+
+.item:active, .item:active strong {
+    color: var(--Dark-Red, #CA1527);
 }
 
 .item:nth-child(4n) {

@@ -1,11 +1,21 @@
 import circle from "./../../assets/icons/red-circle.svg";
 import lock from "./../../assets/icons/lock.svg";
 import styles from "./PrivacyPolicyPage.module.css";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
+import arrow from "../../assets/icons/arrow.svg";
 
 const PrivacyPolicyPage = () => {
     return (
         <section className={"container " + styles.privacyPolicy}>
+            <article className={"breadcrumbs"}>
+                <NavLink to="/">
+                    Петропласт
+                </NavLink>
+                <img src={arrow} alt="Стрелка"/>
+                <NavLink to="/politika-konfidencialnosti">
+                    Политика конфиденциальности
+                </NavLink>
+            </article>
             <article>
                 <div className={styles.titleBlock}>
                     <img className={styles.image} src={lock} alt="Пункт"/>

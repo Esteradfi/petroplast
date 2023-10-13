@@ -25,6 +25,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: 140%; /* 25.2px */
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 5px;
 }
 
 .text {
@@ -35,6 +39,10 @@
     font-weight: 400;
     line-height: 130%; /* 20.8px */
     margin: 0;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 5px;
 }
 
 .button {
@@ -58,6 +66,14 @@
 .button:active {
     background: var(--Dark-Red, #CA1527);
     color: #ffffff;
+}
+
+.price {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
 }
 
 @media screen and (max-width: 800px) {

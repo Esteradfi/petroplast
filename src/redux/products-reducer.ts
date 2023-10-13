@@ -10,7 +10,8 @@ export interface ProductsState {
     selectedProduct?: ProductsItem,
     isFetching: boolean,
     allFeatures: boolean,
-    selectedImage: string
+    searchResults: Array<ProductsItem> | [],
+    search: string
 }
 
 export type ProductsItem = {
@@ -41,14 +42,15 @@ export type ProductsItem = {
     packageWidth?: number | string,
     packageLength?: number | string,
     __v?: string,
-    _id?: string
+    _id: string
 }
 
 const initialState: ProductsState = {
     productsList: [],
     isFetching: true,
     allFeatures: false,
-    selectedImage: ''
+    searchResults: [],
+    search: ''
 };
 
 
@@ -114,14 +116,17 @@ export const ProductsSlice = createSlice({
             state.sortedVolumeProducts = groupedProducts;
         },
         setSelectedProduct: (state, action: PayloadAction<string>) => {
-            const productArticle = action.payload;
-            state.selectedProduct = state.productsList.find(product => product.article.toLowerCase() === productArticle.toLowerCase());
+            const productId = action.payload;
+            state.selectedProduct = state.productsList.find((product: ProductsItem) => product._id.toLowerCase() === productId.toLowerCase());
         },
         seeAllFeatures: (state, action: PayloadAction<boolean>) => {
             state.allFeatures = action.payload;
         },
-        setSelectedImage: (state, action: PayloadAction<string>) => {
-            state.selectedImage = action.payload;
+        changeSearch: (state, action: PayloadAction<string>) => {
+            state.search = action.payload;
+        },
+        setSearchResults: (state, action: PayloadAction<Array<ProductsItem>>) => {
+            state.searchResults = action.payload;
         }
     },
     extraReducers: (builder) => {
@@ -129,7 +134,6 @@ export const ProductsSlice = createSlice({
             .addCase(getProductsThunk.fulfilled, (state, action) => {
                 if (action.payload) {
                     state.productsList = action.payload.reverse();
-                    console.log(state.productsList)
                 } else {
                     state.productsList = action.payload;
                 }
@@ -140,4 +144,4 @@ export const ProductsSlice = createSlice({
 
 export default ProductsSlice.reducer;
 
-export const {setSelectedCategoryProducts, sortVolumeProducts, setSelectedProduct, seeAllFeatures, setSelectedImage} = ProductsSlice.actions;
+export const {setSelectedCategoryProducts, sortVolumeProducts, setSelectedProduct, seeAllFeatures, changeSearch, setSearchResults} = ProductsSlice.actions;

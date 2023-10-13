@@ -39,6 +39,10 @@
     font-weight: 500;
 }
 
+.middleRow .item:nth-child(2) {
+    max-width: 33%;
+}
+
 .middleRow .item:last-child {
     text-align: right;
 }
@@ -70,6 +74,9 @@
     .middleRow .item:last-child {
         text-align: center;
     }
+    .middleRow .item:nth-child(2) {
+        max-width: 80%;
+    }
 }
 
 .underRow {
@@ -77,6 +84,10 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 21px !important;
+}
+
+.underRow .item:first-child {
+    width: 25%;
 }
 
 .menuButton {
@@ -90,8 +101,9 @@
     display: flex;
     align-items: center;
     padding: 0 9px;
-    width: 25%;
     transition: 0.3s ease;
+    width: 100%;
+    height: 65px;
 }
 
 .menuButton:hover {
@@ -106,16 +118,102 @@
     margin-right: 11px;
 }
 
+.menuButtonOpen {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding: 0 9px;
+    transition: 0.3s ease;
+    background: var(--Dark-Red, #CA1527);
+    width: 100%;
+    height: 65px;
+}
+
+.menuButtonOpen:hover {
+    background: var(--bright-red, #FF0018);
+}
+
+.menuButtonOpen:active {
+    background: var(--dark-red, #CA1527);
+}
+
+.menuBlock {
+    position: relative;
+}
+
+.catalog {
+    width: 71.52%;
+    top: 100%;
+    left: 6px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+    border: 0px solid var(--stroke-light-grey, #ADA6A6);
+    background: var(--White, #FFF);
+    /* Drop shadow blur */
+    box-shadow: 0px 2px 8px 2px #C4C4C4;
+    position: absolute;
+    min-height: 100px;
+    padding: 34px 26px;
+    z-index: 6;
+    text-align: left;
+    overflow-y: auto;
+}
+
+@media screen and (max-height: 750px) {
+    .catalog {
+        max-height: 400px;
+    }
+}
+
+.catalogItem {
+    color: var(--Dark-grey, #505050);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: block;
+}
+
+.catalogItem:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.catalogItem:last-child {
+    color: var(--Black, #000);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cross {
+    padding: 10px;
+    margin-right: 11px;
+    width: 45px;
+    height: 45px;
+}
+
 @media screen and (max-width: 915px) {
-    .menuButton {
+    .menuButton, .menuButtonOpen {
         display: flex;
         justify-content: center;
     }
-    .menuButton span {
+    .menuButton span, .menuButtonOpen span {
         display: none;
     }
-    .menuButton img {
+    .menuButton img, .cross {
         margin-right: 0;
+    }
+    .catalog {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        left: 0;
     }
 }
 
@@ -200,4 +298,72 @@
     .middleRow .item:not(:last-child), .underRow .item:not(:last-child) {
         margin-bottom: 15px;
     }
+    .underRow .item:first-child {
+        width: 100%;
+    }
+    .catalog {
+        padding-left: 26px;
+        padding-right: 26px;
+        width: 92%;
+        box-sizing: border-box;
+        left: 6px;
+    }
+}
+
+.searchResultsBlock {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 100%;
+    min-height: 10px;
+    background: #ffffff;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    box-shadow: 0px 3.33333px 3.33333px 3.33333px rgba(169, 163, 163, 0.25);
+    border-radius: 10px;
+}
+
+.searchResultsItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: var(--Dark-grey, #505050);
+    text-align: right !important;
+}
+
+.searchResultsItem:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.searchResultsItem {
+    border-bottom: solid 2px #D9D9D9;
+    transition: 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.searchResultsItem:hover {
+    border-bottom: solid 2px #505050;
+    color: #000;
+}
+
+.searchResultsItem:active {
+    border-bottom: solid 2px #D9D9D9;
+    color: #505050;
+}
+
+.searchResultsItem h3 {
+    margin: 0;
+}
+
+.searchResultsItem img {
+    max-width: 70px;
+    aspect-ratio: 1;
+    object-fit: scale-down;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 10px;
 }

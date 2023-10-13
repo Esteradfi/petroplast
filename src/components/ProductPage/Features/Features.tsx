@@ -11,7 +11,7 @@ const Features = ({...props}) => {
 
     useEffect(() => {
         dispatch(seeAllFeatures(false));
-    }, [])
+    }, [product])
 
     const openAllFeatures = () => {
         dispatch(seeAllFeatures(true));
@@ -28,37 +28,37 @@ const Features = ({...props}) => {
                         <span>
                             Цвет
                         </span>
-                        <span>
+                        <span className={styles.colors}>
                             {product.colors.join(', ').toLowerCase()}
                         </span>
                     </li>
                     {
-                        product.length > 0 && <li className={styles.featuresItem}>
+                        product.productLength > 0 && <li className={styles.featuresItem}>
                         <span>
                             Длина изделия
                         </span>
                             <span>
-                            {product.length} см
+                            {product.productLength} см
                         </span>
                         </li>
                     }
                     {
-                        product.width > 0 && <li className={styles.featuresItem}>
+                        product.productWidth > 0 && <li className={styles.featuresItem}>
                         <span>
                             Ширина изделия
                         </span>
                             <span>
-                            {product.width} см
+                            {product.productWidth} см
                         </span>
                         </li>
                     }
                     {
-                        product.height > 0 && <li className={styles.featuresItem}>
+                        product.productHeight > 0 && <li className={styles.featuresItem}>
                         <span>
                             Высота изделия
                         </span>
                             <span>
-                            {product.height} см
+                            {product.productHeight} см
                         </span>
                         </li>
                     }

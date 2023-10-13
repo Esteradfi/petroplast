@@ -1,0 +1,13 @@
+.similarProducts {
+    margin-bottom: 120px !important;
+}
+
+.title {
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 30px;
+}

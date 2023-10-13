@@ -1,0 +1,99 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.header h2 {
+    color: var(--text-black, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.tableWrapper {
+    margin-bottom: 120px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 660px) {
+    .tableWrapper {
+        overflow-x: scroll;
+    }
+}
+
+.thead tr {
+    background:  var(--stroke-light-grey-2, #DAD3D3);
+    color: var(--Dark-grey, #505050);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 25.2px */
+    height: 84px;
+    border-radius: 10px;
+}
+.thead th {
+    padding: 15px 5px 15px 5px;
+    min-width: 86px;
+    vertical-align: text-top;
+    text-align: left;
+}
+
+.tr {
+    cursor: pointer;
+    color: var(--Dark-grey, #505050);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+}
+
+.tdSemiBold {
+    font-weight: 600;
+}
+
+.tr td {
+    padding: 10px 5px;
+}
+
+.tr td:last-child, .thead th:last-child {
+    text-align: center;
+}
+
+tbody .tr {
+    border-bottom: solid 2px #D9D9D9;
+    transition: 0.3s ease;
+}
+
+tbody .tr:hover {
+    border-bottom: solid 2px #505050;
+    color: #000;
+}
+
+tbody .tr:active {
+    border-bottom: solid 2px #D9D9D9;
+    color: #505050;
+}
+
+.image {
+    aspect-ratio: 1;
+    width: 70px;
+    object-fit: scale-down;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}

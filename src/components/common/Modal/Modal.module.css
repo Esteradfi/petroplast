@@ -1,0 +1,302 @@
+.modal {
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid var(--stroke-light-grey, #ADA6A6);
+    background: #FFF;
+    min-width: 598.19px;
+    min-height: 398.19px;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.modalContent {
+    padding: 47px 18px 47px 37px;
+    position: relative;
+    min-height: 333.02px;
+}
+
+.queryModalContent {
+    padding: 30px 10px;
+    position: relative;
+    min-height: 333.02px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.queryTitle {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.queryTitle span {
+    color: var(--Red-buttons-and-text, #E51428);
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.formWrapper {
+    width: 70%;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    position: relative;
+    width: 100%;
+}
+
+.label:not(:last-child) {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.upLabel {
+    margin-bottom: 10px;
+    color: var(--text-grey, #505050);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: block;
+}
+
+.input {
+    border-radius: 20px;
+    border: 1px solid var(--Grey-text-fields, rgba(175, 172, 172, 0.40));
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input::placeholder {
+    color: var(--stroke-light-grey, #ADA6A6);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: 0.3s ease;
+}
+
+.input:hover::placeholder {
+    color: #8F8888;
+}
+
+.input:active {
+    border: 1px solid rgba(80, 76, 76, 0.40);
+}
+
+.input:focus::placeholder {
+    font-size: 0;
+}
+
+.checkboxLabel {
+    color: var(--stroke-light-grey, #ADA6A6);
+}
+
+.checkboxLabel:hover {
+    color: var(--Grey-hover, #8C8B8B);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.checkboxText {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.selectedCheckboxText {
+    color: var(--text-grey, #505050) !important;
+}
+
+.submitButton {
+    width: 100%;
+    border-radius: 20px;
+    background: var(--Red-buttons-and-text, #E51428);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    padding: 15px 5px;
+    border: none;
+    outline: none;
+    color: var(--White, #FFF);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 31.2px */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submitButton:hover {
+    background: var(--Bright-red, #FF0018);
+}
+
+.submitButton:active {
+    background: var(--Dark-Red, #CA1527);
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px 10px 5px 5px;
+    cursor: pointer;
+}
+
+.pickupIcon {
+    width: 153px;
+    height: 153px;
+    position: absolute;
+    bottom: 14px;
+    right: 47px;
+}
+
+.deliveryIcon {
+    width: 183px;
+    height: 183px;
+    position: absolute;
+    bottom: 17px;
+    right: 34px;
+}
+
+.deliveryRusIcon {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+@media screen and (max-width: 1250px) {
+    .deliveryRusIcon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .deliveryRusIcon {
+        bottom: 0;
+    }
+}
+
+.title {
+    color: var(--Orange-buttons-and-text, #F60);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.text {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.smallText {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    margin: 0;
+}
+
+.list {
+    padding-left: 19px;
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    margin: 0;
+}
+
+.red {
+    color: var(--Red-buttons-and-text, #E51428);
+}
+
+.buttonBlock {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.buttonBlock img {
+    margin-right: 10px;
+}
+
+.buttonBlock a {
+    font-weight: 800;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 620px) {
+    .modal {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .pickupIcon, .deliveryIcon {
+        position: static;
+        float: right;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .smallText, .list {
+        font-size: 12px;
+    }
+}
+
+.fetchingBlock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.errorBorder {
+    border: 1px solid var(--Red-buttons-and-text, #E51428) !important;
+}

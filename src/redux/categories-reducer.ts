@@ -5,8 +5,9 @@ import $api from '../http';
 
 export interface CategoriesState {
     categoriesList: Array<CategoriesItem> | [],
-    isFetching: boolean
-};
+    isFetching: boolean,
+    isOpen: boolean,
+}
 
 export type CategoriesItem = {
     checkbox: boolean,
@@ -18,7 +19,8 @@ export type CategoriesItem = {
 
 const initialState: CategoriesState = {
     categoriesList: [],
-    isFetching: true
+    isFetching: true,
+    isOpen: false,
 };
 
 
@@ -38,7 +40,8 @@ export const CategoriesSlice = createSlice({
     name: "Categories",
     initialState,
     reducers: {
-        changeSelectedCategory: (state, action: PayloadAction<string>) => {
+        changeIsOpenCatalog: (state, action: PayloadAction<boolean>) => {
+            state.isOpen = action.payload
         }
     },
     extraReducers: (builder) => {
@@ -46,7 +49,6 @@ export const CategoriesSlice = createSlice({
         .addCase(getCategoriesThunk.fulfilled, (state, action) => {
             if(action.payload) {
                 state.categoriesList = action.payload.reverse();
-                console.log(state.categoriesList)
             } else {
                 state.categoriesList = action.payload;
             }
@@ -57,4 +59,4 @@ export const CategoriesSlice = createSlice({
 
 export default CategoriesSlice.reducer;
 
-export const {} = CategoriesSlice.actions;
+export const {changeIsOpenCatalog} = CategoriesSlice.actions;

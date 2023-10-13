@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const CategoryItem = ({...el}) => {
     return (
-        <NavLink to={"/" + el.name} className={styles.card}>
+        <NavLink to={"/category/" + el.name} className={styles.card}>
             <img src={el.image} alt="Категория" />
             <h4>
                 {el.name}

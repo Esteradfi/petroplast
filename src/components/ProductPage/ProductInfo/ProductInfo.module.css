@@ -14,16 +14,11 @@
 }
 
 .column:first-child {
-    width: 60%;
+    width: 43%;
 }
 
 .column:last-child {
-    width: 30%;
-}
-
-.imagesColumn {
-    display: flex;
-    justify-content: space-between;
+    width: 40%;
 }
 
 @media screen and (max-width: 800px) {
