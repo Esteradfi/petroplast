@@ -1,0 +1,15 @@
+.mainSlider {
+    margin-bottom: 155px !important;
+    margin-top: 120px !important;
+    position: relative;
+}
+
+.title {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+}

@@ -159,7 +159,7 @@
     position: absolute;
     min-height: 100px;
     padding: 34px 26px;
-    z-index: 6;
+    z-index: 11;
     text-align: left;
     overflow-y: auto;
 }
@@ -177,6 +177,7 @@
     font-weight: 600;
     line-height: normal;
     display: block;
+    transition: 0.3s ease;
 }
 
 .catalogItem:not(:last-child) {
@@ -185,6 +186,14 @@
 
 .catalogItem:last-child {
     color: var(--Black, #000);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.catalogItem:hover {
+    color: var(--text-black, #000);
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -356,6 +365,7 @@
 
 .searchResultsItem h3 {
     margin: 0;
+    font-weight: 600;
 }
 
 .searchResultsItem img {

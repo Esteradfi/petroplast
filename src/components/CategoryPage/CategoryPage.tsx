@@ -9,6 +9,7 @@ import {ProductsItem, setSelectedCategoryProducts, sortVolumeProducts} from "../
 import VolumeGroup from "./VolumeGroup/VolumeGroup";
 import productPage from "../ProductPage/ProductPage";
 import arrow from "../../assets/icons/arrow.svg";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const CategoryPage = () => {
     const dispatch = useAppDispatch();
@@ -20,7 +21,7 @@ const CategoryPage = () => {
 
     useEffect(() => {
         if (!isExistingCategory) {
-            navigate("/404");
+            navigate("/404", { replace: true });
         }
     }, [isExistingCategory])
 

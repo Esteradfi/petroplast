@@ -51,7 +51,7 @@
     font-weight: 700;
 }
 
-.card a {
+.card button {
     margin-top: 15px;
     display: block;
     box-sizing: border-box;
@@ -65,13 +65,15 @@
     font-weight: 600;
     line-height: normal;
     transition: 0.3s ease;
+    border: none;
+    outline: none;
 }
 
-.card a:hover {
+.card:hover button {
     background: var(--Bright-red, #FF0018);
 }
 
-.card a:active {
+.card:active button {
     background: var(--Dark-Red, #CA1527);
     color: #ffffff;
 }

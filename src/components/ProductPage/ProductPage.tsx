@@ -23,7 +23,7 @@ const ProductPage = () => {
 
     useEffect(() => {
         if (!isExistingProduct) {
-            navigate("/404")
+            navigate("/404", { replace: true })
         }
     }, [isExistingProduct]);
 

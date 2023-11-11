@@ -5,12 +5,28 @@ import {useAppSelector} from "../../redux/hooks";
 import {ProductsItem} from "../../redux/products-reducer";
 import PriceListItem from "./PriceListItem/PriceListItem";
 import arrow from "./../../assets/icons/arrow.svg";
+import PriceListCategory from "./PriceListCategory/PriceListCategory";
 
 const PriceListPage = () => {
-    const products = useAppSelector(state => state.products.productsList);
-    const sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name));
+    const products: any = useAppSelector(state => state.products.productsList);
+    const sortedProducts = products.reduce((acc: any[], product: any) => {
+        if (product.category !== "Новинки" && product.category !== "Хиты продаж") {
+            const categoryIndex = acc.findIndex((category: any[]) => category[0].category === product.category);
 
-    let sortedProductsItems = sortedProducts.map((el: ProductsItem) => <PriceListItem key={el._id} {...el} />)
+            if (categoryIndex !== -1) {
+                acc[categoryIndex].push(product);
+            } else {
+                acc.push([product]);
+            }
+        }
+
+        return acc;
+    }, []);
+
+    console.log(sortedProducts)
+
+
+    let sortedProductsCategory = sortedProducts.map((el: Array<ProductsItem>) => <PriceListCategory key={el[0]._id} category={el} />);
 
 
     return (
@@ -31,7 +47,7 @@ const PriceListPage = () => {
                 </h2>
             </header>
             <article className={styles.tableWrapper}>
-                <table className={styles.table}>
+                <table className={styles.table} cellSpacing={0} cellPadding={0}>
                     <thead className={styles.thead}>
                     <tr>
                         <th>Артикул</th>
@@ -45,7 +61,7 @@ const PriceListPage = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    {sortedProductsItems}
+                    {sortedProductsCategory}
                     </tbody>
                 </table>
             </article>

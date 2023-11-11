@@ -11,6 +11,7 @@ const SimilarProductsSlider = (props) => {
 
     let sliderSlides = similarProducts.map(el => <SwiperSlide key={el._id}><SimilarProductCard product={el} /></SwiperSlide>);
 
+
     return (
         <div className={"similar-products-slider " + styles.sliderWrapper}>
             <Swiper

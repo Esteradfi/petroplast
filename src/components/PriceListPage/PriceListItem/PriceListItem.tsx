@@ -10,7 +10,7 @@ const PriceListItem = ({...props}) => {
     }
 
     return (
-        <tr onClick={toProductPage} className={styles.tr}>
+        <tr onClick={toProductPage} className={styles.tr} tabIndex={0}>
             <td>
                 {props.article}
             </td>

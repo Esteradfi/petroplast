@@ -7,7 +7,7 @@ const SimilarProductCard = ({...props}) => {
     const product = props.product;
 
     return (
-        <div className={styles.card}>
+        <NavLink to={"/category/" + product.category + "/" + product._id} className={styles.card} tabIndex={0}>
             <img src={product.images[0]} alt="Товар"/>
             <h4>
                 {product.name}
@@ -18,7 +18,7 @@ const SimilarProductCard = ({...props}) => {
             <p>
                 {
                     product.productLength && product.productWidth && product.productHeight
-                    ? product.productLength + 'x' + product.productWidth + 'x' + product.productHeight + ' см'
+                    ? product.productLength + ' x ' + product.productWidth + ' x ' + product.productHeight + ' см'
                     : null
                 }
             </p>
@@ -31,10 +31,10 @@ const SimilarProductCard = ({...props}) => {
             <p>
                 ({product.quantityPerPackage} шт)
             </p>
-            <NavLink to={"/category/" + product.category + "/" + product._id}>
+            <button>
                 Смотреть
-            </NavLink>
-        </div>
+            </button>
+        </NavLink>
     )
 }
 

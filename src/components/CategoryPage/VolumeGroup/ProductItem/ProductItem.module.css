@@ -9,6 +9,16 @@
     margin-bottom: 40px;
     text-align: center;
     justify-content: space-between;
+    transition: 0.3s ease;
+}
+
+.card:hover .button {
+    background: var(--Bright-red, #FF0018);
+}
+
+.card:active .button {
+    background: var(--Dark-Red, #CA1527);
+    color: #ffffff;
 }
 
 .image {
@@ -57,15 +67,8 @@
     font-weight: 600;
     line-height: normal;
     transition: 0.3s ease;
-}
-
-.button:hover {
-    background: var(--Bright-red, #FF0018);
-}
-
-.button:active {
-    background: var(--Dark-Red, #CA1527);
-    color: #ffffff;
+    outline: none;
+    border: none;
 }
 
 .price {
