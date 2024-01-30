@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/petroplast/static/css/main.2fc8c7a4.css",
-    "main.js": "/petroplast/static/js/main.5d8b6860.js",
+    "main.css": "/petroplast/static/css/main.e9ab0cec.css",
+    "main.js": "/petroplast/static/js/main.dde537ff.js",
     "static/media/cer3.png": "/petroplast/static/media/cer3.a2700baa93c31498a514.png",
     "static/media/small-logo.jpg": "/petroplast/static/media/small-logo.d179505e250f9beeb82d.jpg",
     "static/media/cer1.png": "/petroplast/static/media/cer1.dede68cbfdaf152d6b23.png",
@@ -50,16 +50,17 @@
     "static/media/workTime.svg": "/petroplast/static/media/workTime.8750ea3881527e5e19edcf6d1f2e55de.svg",
     "static/media/arrow.svg": "/petroplast/static/media/arrow.b111b3bef9384f6c628159ae71e070fe.svg",
     "static/media/payment.svg": "/petroplast/static/media/payment.0e45c6fa92432338b96f1fe7daef00fc.svg",
+    "static/media/arrow-down.svg": "/petroplast/static/media/arrow-down.577a5fc47dfa7daec075eb254c822ca0.svg",
     "static/media/red-circle.svg": "/petroplast/static/media/red-circle.2e48a852ad138b497a2e485a7b3eab89.svg",
     "static/media/delivery-rus.svg": "/petroplast/static/media/delivery-rus.f66289857b561eb6c383e3c9c822016f.svg",
     "static/media/mail.svg": "/petroplast/static/media/mail.b3c0452223124a5c25afcd36b6593347.svg",
     "static/media/cross.svg": "/petroplast/static/media/cross.72b93aadaca3dee4874d35cb5c957085.svg",
     "static/media/close.svg": "/petroplast/static/media/close.7c66cecd33f368399ee25df778170b96.svg",
-    "main.2fc8c7a4.css.map": "/petroplast/static/css/main.2fc8c7a4.css.map",
-    "main.5d8b6860.js.map": "/petroplast/static/js/main.5d8b6860.js.map"
+    "main.e9ab0cec.css.map": "/petroplast/static/css/main.e9ab0cec.css.map",
+    "main.dde537ff.js.map": "/petroplast/static/js/main.dde537ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fc8c7a4.css",
-    "static/js/main.5d8b6860.js"
+    "static/css/main.e9ab0cec.css",
+    "static/js/main.dde537ff.js"
   ]
 }
