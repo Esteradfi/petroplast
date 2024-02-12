@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/petroplast/static/css/main.9b34127a.css",
-    "main.js": "/petroplast/static/js/main.2d94e09f.js",
+    "main.css": "/petroplast/static/css/main.df514646.css",
+    "main.js": "/petroplast/static/js/main.b5cbd7c3.js",
+    "static/media/white-marble.svg": "/petroplast/static/media/white-marble.a4f8b09e620ab5036a03f70e8ba116e7.svg",
     "static/media/cer3.png": "/petroplast/static/media/cer3.a2700baa93c31498a514.png",
     "static/media/small-logo.jpg": "/petroplast/static/media/small-logo.d179505e250f9beeb82d.jpg",
     "static/media/cer1.png": "/petroplast/static/media/cer1.dede68cbfdaf152d6b23.png",
@@ -17,6 +18,7 @@
     "static/media/montserrat-cyrillic-wght-normal.woff2": "/petroplast/static/media/montserrat-cyrillic-wght-normal.f41a9bc7688bda1e8450.woff2",
     "static/media/inter-latin-700-normal.woff2": "/petroplast/static/media/inter-latin-700-normal.54321e26b8bf4739a16d.woff2",
     "static/media/inter-cyrillic-ext-700-normal.woff": "/petroplast/static/media/inter-cyrillic-ext-700-normal.9e141b251a1e8e7d407d.woff",
+    "static/media/another-color.svg": "/petroplast/static/media/another-color.0babf3c83ce5d597d8d201eae157b2da.svg",
     "static/media/inter-greek-700-normal.woff": "/petroplast/static/media/inter-greek-700-normal.f0cb50fe0896d91929f9.woff",
     "static/media/inter-cyrillic-ext-700-normal.woff2": "/petroplast/static/media/inter-cyrillic-ext-700-normal.177b82cdf603287fdd19.woff2",
     "static/media/inter-cyrillic-700-normal.woff": "/petroplast/static/media/inter-cyrillic-700-normal.9dc29eccfc6669125dc1.woff",
@@ -56,11 +58,11 @@
     "static/media/mail.svg": "/petroplast/static/media/mail.b3c0452223124a5c25afcd36b6593347.svg",
     "static/media/cross.svg": "/petroplast/static/media/cross.72b93aadaca3dee4874d35cb5c957085.svg",
     "static/media/close.svg": "/petroplast/static/media/close.7c66cecd33f368399ee25df778170b96.svg",
-    "main.9b34127a.css.map": "/petroplast/static/css/main.9b34127a.css.map",
-    "main.2d94e09f.js.map": "/petroplast/static/js/main.2d94e09f.js.map"
+    "main.df514646.css.map": "/petroplast/static/css/main.df514646.css.map",
+    "main.b5cbd7c3.js.map": "/petroplast/static/js/main.b5cbd7c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b34127a.css",
-    "static/js/main.2d94e09f.js"
+    "static/css/main.df514646.css",
+    "static/js/main.b5cbd7c3.js"
   ]
 }
