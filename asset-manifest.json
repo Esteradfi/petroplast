@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/petroplast/static/css/main.7727f820.css",
-    "main.js": "/petroplast/static/js/main.b5cbd7c3.js",
+    "main.css": "/petroplast/static/css/main.a0268471.css",
+    "main.js": "/petroplast/static/js/main.f8a0f687.js",
     "static/media/white-marble.svg": "/petroplast/static/media/white-marble.a4f8b09e620ab5036a03f70e8ba116e7.svg",
     "static/media/cer3.png": "/petroplast/static/media/cer3.a2700baa93c31498a514.png",
     "static/media/small-logo.jpg": "/petroplast/static/media/small-logo.d179505e250f9beeb82d.jpg",
@@ -58,11 +58,11 @@
     "static/media/mail.svg": "/petroplast/static/media/mail.b3c0452223124a5c25afcd36b6593347.svg",
     "static/media/cross.svg": "/petroplast/static/media/cross.72b93aadaca3dee4874d35cb5c957085.svg",
     "static/media/close.svg": "/petroplast/static/media/close.7c66cecd33f368399ee25df778170b96.svg",
-    "main.7727f820.css.map": "/petroplast/static/css/main.7727f820.css.map",
-    "main.b5cbd7c3.js.map": "/petroplast/static/js/main.b5cbd7c3.js.map"
+    "main.a0268471.css.map": "/petroplast/static/css/main.a0268471.css.map",
+    "main.f8a0f687.js.map": "/petroplast/static/js/main.f8a0f687.js.map"
   },
   "entrypoints": [
-    "static/css/main.7727f820.css",
-    "static/js/main.b5cbd7c3.js"
+    "static/css/main.a0268471.css",
+    "static/js/main.f8a0f687.js"
   ]
 }
