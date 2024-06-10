@@ -10,6 +10,7 @@ import styles from "./ProductPage.module.css";
 import ProductInfo from "./ProductInfo/ProductInfo";
 import SimilarProducts from "./SimilarProductsSlider/SimilarProducts";
 import arrow from "../../assets/icons/arrow.svg";
+import { Helmet } from 'react-helmet-async';
 
 const ProductPage = () => {
     const dispatch = useAppDispatch();
@@ -35,6 +36,10 @@ const ProductPage = () => {
 
     return (
         <section>
+            <Helmet>
+                <title>{selectedProduct ? selectedProduct.name + " Петропласт" : "Петропласт"}</title>
+                <meta name='description' content={selectedProduct ? selectedProduct.description: " Петропласт"} />
+            </Helmet>
             <article className={"container breadcrumbs"}>
                 <NavLink to="/">
                     Популярные категории

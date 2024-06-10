@@ -7,9 +7,12 @@ import {useEffect} from "react";
 import {useAppDispatch, useAppSelector} from "../../redux/hooks";
 import {ProductsItem, setSelectedCategoryProducts, sortVolumeProducts} from "../../redux/products-reducer";
 import VolumeGroup from "./VolumeGroup/VolumeGroup";
-import productPage from "../ProductPage/ProductPage";
 import arrow from "../../assets/icons/arrow.svg";
-import ErrorPage from "../ErrorPage/ErrorPage";
+import { Helmet } from 'react-helmet-async';
+import FiltersBlock from "./FiltersBlock/FiltersBlock";
+import {getGalleryThunk} from "../../redux/categories-reducer";
+import {clearAllFilters, setProducts} from "../../redux/filters-reducer";
+import ProductItem from "./VolumeGroup/ProductItem/ProductItem";
 
 const CategoryPage = () => {
     const dispatch = useAppDispatch();
@@ -18,6 +21,11 @@ const CategoryPage = () => {
     const categoryName: string = useLocation().pathname.split('/')[2];
     const decodedCategoryName: string = decodeURIComponent(categoryName);
     const isExistingCategory = products.find(product => product.category === decodedCategoryName);
+    const isFilterPrice = useAppSelector(state => state.filters.price.isSelected);
+    const isFilterVolume = useAppSelector(state => state.filters.volume.isSelected);
+    const isFilterColors = useAppSelector(state => state.filters.colors.isSelected);
+    const filteredProducts = useAppSelector(state => state.filters.filterProducts);
+
 
     useEffect(() => {
         if (!isExistingCategory) {
@@ -27,6 +35,7 @@ const CategoryPage = () => {
 
     useEffect(() => {
         dispatch(setSelectedCategoryProducts(decodedCategoryName));
+        dispatch(getGalleryThunk(decodedCategoryName));
     }, [products, decodedCategoryName]);
 
     const categoryProducts = useAppSelector(state => state.products.selectedCategoryProducts);
@@ -34,6 +43,8 @@ const CategoryPage = () => {
     useEffect(() => {
         if (categoryProducts) {
             dispatch(sortVolumeProducts(categoryProducts));
+            dispatch(clearAllFilters());
+            dispatch(setProducts(categoryProducts));
         }
     }, [categoryProducts]);
 
@@ -46,8 +57,18 @@ const CategoryPage = () => {
                                                                                                        group={el}/>);
     }
 
+    let filteredProductsItems;
+
+    if (filteredProducts) {
+        filteredProductsItems = filteredProducts.map(((el: ProductsItem) => <ProductItem key={el._id} item={el} />));
+    }
+
     return (
         <section>
+            <Helmet>
+                <title>{decodedCategoryName ? decodedCategoryName + " Петропласт" : "Петропласт"}</title>
+                <meta name='description' content={sortedVolumeProducts && sortedVolumeProducts.length > 0 ? sortedVolumeProducts[0].description : "Петропласт"} />
+            </Helmet>
             <article className={"container breadcrumbs"}>
                 <NavLink to="/">
                     Популярные категории
@@ -61,9 +82,15 @@ const CategoryPage = () => {
                 <h2>
                     {decodedCategoryName}
                 </h2>
+                <FiltersBlock />
             </header>
+            <article className={"container "}>
+                <NavLink to={`/category/${decodedCategoryName}/gallery`} className={styles.gallery}>
+                    Фотогалерея
+                </NavLink>
+            </article>
             <article className="container">
-                {!sortedVolumeProductsItems || sortedVolumeProductsItems.length !== 0 ? sortedVolumeProductsItems :
+                {isFilterColors || isFilterPrice || isFilterVolume ? <div className={styles.items}>{filteredProductsItems}</div> : !sortedVolumeProductsItems || sortedVolumeProductsItems.length !== 0 ? sortedVolumeProductsItems :
                     <div className={styles.emptyBlock}>Товаров этой категории ещё нет</div>}
             </article>
             <PrivilegeBlock/>

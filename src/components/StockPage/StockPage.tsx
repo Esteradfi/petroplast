@@ -7,6 +7,7 @@ import {NavLink} from "react-router-dom";
 import arrow from "../../assets/icons/arrow.svg";
 import {changeIsOpen, setIsQueryModal} from "../../redux/modal-reducer";
 import {useAppDispatch} from "../../redux/hooks";
+import {Helmet} from "react-helmet-async";
 
 const StockPage = () => {
     const dispatch = useAppDispatch();
@@ -17,6 +18,10 @@ const StockPage = () => {
     }
     return (
         <section className={"container " + styles.page}>
+            <Helmet>
+                <title>{"Петропласт - Акции"}</title>
+                <meta name='description' content={"Петропласт - Акции"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Меню

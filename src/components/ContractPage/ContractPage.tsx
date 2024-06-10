@@ -6,6 +6,7 @@ import {NavLink} from "react-router-dom";
 import arrow from "../../assets/icons/arrow.svg";
 import {useAppDispatch} from "../../redux/hooks";
 import {changeIsOpen, setIsQueryModal} from "../../redux/modal-reducer";
+import {Helmet} from "react-helmet-async";
 
 const ContractPage = () => {
     const dispatch = useAppDispatch();
@@ -17,6 +18,10 @@ const ContractPage = () => {
 
     return (
         <section className={"container " + styles.page}>
+            <Helmet>
+                <title>{"Петропласт - Договор"}</title>
+                <meta name='description' content={"Петропласт - Договор"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Меню

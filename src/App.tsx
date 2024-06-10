@@ -27,9 +27,13 @@ import ContactsPage from "./components/ContactsPage/ContactsPage";
 import PriceListPage from "./components/PriceListPage/PriceListPage";
 import DeliveryPage from "./components/DeliveryPage/DeliveryPage";
 import AboutPage from "./components/AboutPage/AboutPage";
+import {Helmet, HelmetProvider} from 'react-helmet-async';
+import GalleryPage from "./components/GalleryPage/GalleryPage";
+import {getTextsThunk} from "./redux/texts-reducer";
 
 function App() {
     const dispatch = useAppDispatch();
+    const helmetContext = {};
     let isFethcingCategories = useAppSelector(state => state.categories.isFetching);
     let isFethcingProducts = useAppSelector(state => state.products.isFetching);
     let isFethcingBanners = useAppSelector(state => state.banners.isFetching);
@@ -42,7 +46,8 @@ function App() {
     useEffect(() => {
         dispatch(getBannersThunk());
         dispatch(getCategoriesThunk());
-        dispatch(getProductsThunk())
+        dispatch(getProductsThunk());
+        dispatch(getTextsThunk());
     }, []);
 
     const closePopup = () => {
@@ -51,43 +56,50 @@ function App() {
 
 
     return (
-        <div className={isOpen ? "lock" : "App"}>
-            {isOpen && <div onClick={closePopup} className="overlay"></div>}
-            {
-                isOpen && <Modal>
-                    {isPickupModal ? <PickupModal/> : isDeliveryModal ? <DeliveryModal/> : isDeliveryRusModal ?
-                        <DeliveryRusModal/> : <QueryModal/>}
-                </Modal>
-            }
-            <div className='content'>
-                <ScrollToTop>
-                    <Header/>
-                    <main>
-                        {
-                            isFethcingBanners || isFethcingCategories || isFethcingProducts ?
-                                <div className={"loaderBlock"}>
-                                    <img src={loader} alt="Загрузка"/>
-                                </div> :
-                                <Routes>
-                                    <Route path="/" element={<MainPage/>}/>
-                                    <Route path="/politika-konfidencialnosti" element={<PrivacyPolicyPage/>}/>
-                                    <Route path="/order-production" element={<OrderProduction/>}/>
-                                    <Route path="/contract" element={<ContractPage/>}/>
-                                    <Route path="/stock" element={<StockPage/>}/>
-                                    <Route path="/contacts" element={<ContactsPage />}/>
-                                    <Route path="/price-list"  element={<PriceListPage />}/>
-                                    <Route path="/about" element={<AboutPage />} />
-                                    <Route path="/delivery" element={<DeliveryPage />} />
-                                    <Route path="/category/:category" element={<CategoryPage/>}/>
-                                    <Route path="/category/:category/:product" element={<ProductPage/>}/>
-                                    <Route path="*" element={<ErrorPage/>}/>
-                                </Routes>
-                        }
-                    </main>
-                </ScrollToTop>
+        <HelmetProvider context={helmetContext}>
+            <Helmet>
+                <meta name="description" content="Компания Петропласт является производителем пластмассовых хозяйственно-бытовых изделий. Мы предлагаем широкий ассортимент высококачественных и практичных товаров для дома. Оформите заявку сейчас и улучшите свою повседневную жизнь!"/>
+                    <title>Петропласт - производитель пластмассовых хозяйственно-бытовых изделий</title>
+            </Helmet>
+            <div className={isOpen ? "lock" : "App"}>
+                {isOpen && <div onClick={closePopup} className="overlay"></div>}
+                {
+                    isOpen && <Modal>
+                        {isPickupModal ? <PickupModal/> : isDeliveryModal ? <DeliveryModal/> : isDeliveryRusModal ?
+                            <DeliveryRusModal/> : <QueryModal/>}
+                    </Modal>
+                }
+                <div className='content'>
+                    <ScrollToTop>
+                        <Header/>
+                        <main>
+                            {
+                                isFethcingBanners || isFethcingCategories || isFethcingProducts ?
+                                    <div className={"loaderBlock"}>
+                                        <img src={loader} alt="Загрузка"/>
+                                    </div> :
+                                    <Routes>
+                                        <Route path="/" element={<MainPage/>}/>
+                                        <Route path="/politika-konfidencialnosti" element={<PrivacyPolicyPage/>}/>
+                                        <Route path="/order-production" element={<OrderProduction/>}/>
+                                        <Route path="/contract" element={<ContractPage/>}/>
+                                        <Route path="/stock" element={<StockPage/>}/>
+                                        <Route path="/contacts" element={<ContactsPage/>}/>
+                                        <Route path="/price-list" element={<PriceListPage/>}/>
+                                        <Route path="/about" element={<AboutPage/>}/>
+                                        <Route path="/delivery" element={<DeliveryPage/>}/>
+                                        <Route path="/category/:category" element={<CategoryPage/>}/>
+                                        <Route path="/category/:category/gallery" element={<GalleryPage/>}/>
+                                        <Route path="/category/:category/:product" element={<ProductPage/>}/>
+                                        <Route path="*" element={<ErrorPage/>}/>
+                                    </Routes>
+                            }
+                        </main>
+                    </ScrollToTop>
+                </div>
+                <Footer/>
             </div>
-            <Footer/>
-        </div>
+        </HelmetProvider>
     );
 }
 

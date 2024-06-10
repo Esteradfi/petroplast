@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {Link, NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {changeSearch, ProductsItem, setSearchResults} from "../../redux/products-reducer";
@@ -21,13 +21,9 @@ const Header = () => {
     const categoriesList = useAppSelector(state => state.categories.categoriesList);
     const productsList = useAppSelector((state) => state.products.productsList);
     const searchResults = useAppSelector((state) => state.products.searchResults);
-    const [isCatalogFocused, setIsCatalogFocused] = useState(false);
     const [isSearchFocused, setIsSearchFocused] = useState(false);
     const [isSearchMouseLeave, setIsSearchMouseLeave] = useState(false);
-
-    const changeIsOpenMenu = () => {
-        dispatch(changeIsOpenCatalog(!isOpen));
-    }
+    const menuRef = useRef<HTMLDivElement | null>(null);
 
     function sortByCategoryName(a: CategoriesItem, b: CategoriesItem): number {
         // Если имя категории - "Новинки", то она должна быть первой
@@ -115,16 +111,8 @@ const Header = () => {
         }, 150);
     };
 
-
-    const handleCatalogFocus = () => {
-        setIsCatalogFocused(true);
-    };
-
-    const handleCatalogBlur = () => {
-        setTimeout(() => {
-            setIsCatalogFocused(false);
-            dispatch(changeIsOpenCatalog(false));
-        }, 150)
+    const changeIsOpenMenu = () => {
+        dispatch(changeIsOpenCatalog(!isOpen));
     }
 
     const handleCatalogMouseUp = () => {
@@ -136,6 +124,19 @@ const Header = () => {
     const handleCatalogMouseDown = () => {
         dispatch(changeIsOpenCatalog(true));
     };
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                dispatch(changeIsOpenCatalog(false));
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [dispatch]);
 
     let catalogItems = [];
 
@@ -195,12 +196,12 @@ const Header = () => {
                 </div>
             </div>
             <div className={"container " + styles.underRow}>
-                <div className={styles.item + " " + styles.menuBlock} tabIndex={0} onFocus={handleCatalogFocus} onBlur={handleCatalogBlur}>
+                <div ref={menuRef} className={styles.item + " " + styles.menuBlock} tabIndex={0}>
                     <button onClick={changeIsOpenMenu} className={isOpen ? styles.menuButtonOpen : styles.menuButton}>
                         <img src={isOpen ? cross : burger} className={isOpen ? styles.cross : ''} alt="Меню"/>
                         <span>Каталог</span>
                     </button>
-                    {isOpen && isCatalogFocused &&
+                    {isOpen &&
                         <div className={styles.catalog}>
                             {catalogItems}
                             <NavLink onMouseDown={handleCatalogMouseDown}

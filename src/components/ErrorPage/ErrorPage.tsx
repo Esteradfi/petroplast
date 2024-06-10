@@ -1,10 +1,15 @@
 import styles from "./ErrorPage.module.css"
 import {NavLink} from "react-router-dom";
 import errorImage from "./../../assets/images/404.jpg";
+import {Helmet} from "react-helmet-async";
 
 const ErrorPage = () => {
     return (
         <section className={"container"}>
+            <Helmet>
+                <title>{"404"}</title>
+                <meta name='description' content={"404"} />
+            </Helmet>
             <h2 className={styles.title}>
                 <span>404</span> error
             </h2>

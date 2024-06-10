@@ -1,0 +1,37 @@
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    width: 100%;
+}
+
+.itemText {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
+.checkboxSpan::before {
+    margin-right: 0 !important;
+}
+
+.color {
+    width: 28.19px !important;
+    height: 28.19px !important;
+    border-radius: 100%;
+    margin: 0 15px;
+}
+
+@media screen and (max-width: 414px) {
+    .color {
+        margin: 0 10px;
+    }
+}

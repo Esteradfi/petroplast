@@ -180,8 +180,16 @@
     transition: 0.3s ease;
 }
 
-.catalogItem:not(:last-child) {
-    margin-bottom: 30px;
+.catalogItem:not(:first-child, :last-child) {
+    padding: 15px 0;
+}
+
+.catalogItem:first-child {
+    padding-bottom: 15px;
+}
+
+.catalogItem:last-child {
+    padding-top: 15px;
 }
 
 .catalogItem:last-child {

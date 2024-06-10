@@ -7,10 +7,15 @@ import cer1 from "./../../assets/images/cer1.png";
 import cer2 from "./../../assets/images/cer2.png";
 import cer3 from "./../../assets/images/cer3.png";
 import styles from "./AboutPage.module.css";
+import {Helmet} from "react-helmet-async";
 
 const AboutPage = () => {
     return (
         <section className={"container "}>
+            <Helmet>
+                <title>{"Петропласт - О нас"}</title>
+                <meta name='description' content={"Петропласт - О нас"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Меню

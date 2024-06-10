@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import arrow from "../../assets/icons/arrow.svg";
 import {changeIsOpen, setIsQueryModal} from "../../redux/modal-reducer";
 import {useAppDispatch} from "../../redux/hooks";
+import {Helmet} from "react-helmet-async";
 
 const OrderProduction = () => {
     const dispatch = useAppDispatch();
@@ -14,6 +15,10 @@ const OrderProduction = () => {
     }
     return (
         <section className={"container " + styles.orderProduction}>
+            <Helmet>
+                <title>{"Петропласт - Производство на заказ"}</title>
+                <meta name='description' content={"Петропласт - Производство на заказ"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Меню

@@ -3,7 +3,6 @@ import styles from "./../PriceList.module.css";
 
 const PriceListCategory = ({...props}) => {
     let category = props.category;
-    console.log(category)
 
     let sortedProductsItems = category.map((el: any) => <PriceListItem key={el._id} {...el} />)
     return (

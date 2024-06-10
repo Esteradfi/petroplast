@@ -5,9 +5,14 @@ import clock from "./../../assets/icons/clock.svg";
 import house from "./../../assets/icons/house.svg";
 import {Link, NavLink} from "react-router-dom";
 import arrow from "../../assets/icons/arrow.svg";
+import { Helmet } from 'react-helmet-async';
 const ContactsPage = () => {
     return (
         <section className={"container "}>
+            <Helmet>
+                <title>{"Петропласт - Контакты"}</title>
+                <meta name='description' content={"Петропласт - контакты"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Меню

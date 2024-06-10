@@ -1,0 +1,37 @@
+.items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4%;
+    margin: 50px 0 70px;
+}
+
+.empty {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: var(--text-black, #000);
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@media screen and (max-width: 760px) {
+    .subtitle {
+        text-align: center;
+    }
+    .items {
+        gap: 6%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .items {
+        gap: 0;
+        justify-content: center;
+    }
+}

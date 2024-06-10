@@ -3,10 +3,15 @@ import lock from "./../../assets/icons/lock.svg";
 import styles from "./PrivacyPolicyPage.module.css";
 import {Link, NavLink} from "react-router-dom";
 import arrow from "../../assets/icons/arrow.svg";
+import {Helmet} from "react-helmet-async";
 
 const PrivacyPolicyPage = () => {
     return (
         <section className={"container " + styles.privacyPolicy}>
+            <Helmet>
+                <title>{"Петропласт - Политика конфиденциальности"}</title>
+                <meta name='description' content={"Петропласт - Политика конфиденциальности"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Петропласт

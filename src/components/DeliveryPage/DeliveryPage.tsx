@@ -6,10 +6,18 @@ import deliveryRus from "./../../assets/icons/delivery-rus.svg";
 import payment from "./../../assets/icons/payment.svg";
 import QueryBlock from "../common/QueryBlock/QueryBlock";
 import styles from "./DeliveryPage.module.css";
+import {Helmet} from "react-helmet-async";
+import {useAppSelector} from "../../redux/hooks";
 
 const DeliveryPage = () => {
+    const texts = useAppSelector(state => state.texts.deliveryPageContent);
+
     return (
         <section className={"container "}>
+            <Helmet>
+                <title>{"Петропласт - Доставка и оплата"}</title>
+                <meta name='description' content={"Петропласт - Доставка и оплата"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Меню
@@ -25,33 +33,15 @@ const DeliveryPage = () => {
                 </h2>
                 <div className={styles.item}>
                     <img src={pickup} alt="Самовывоз"/>
-                    <div>
-                        <strong>Самовывоз со склада</strong> осуществляется по адресу Санкт-Петербург, г. Сестрорецк, ул. Воскова, д. 2 лит. Т Режим работы с 9:00 до 18:00 часов без перерыва и выходных.
-                    </div>
+                    <div dangerouslySetInnerHTML={{__html: texts.pickupContent.text}}></div>
                 </div>
                 <div className={styles.item}>
                     <img src={delivery} alt="По области"/>
-                    <div>
-                        <strong>Доставка по Санкт-Петербургу и Лен. обл.</strong> <br/>
-                        <span>Бессрочная акция:</span> бесплатная доставка по Санкт-Петербургу при заказе от 30 тыс. рублей. Чтобы воспользоваться этим предложением, просто позвоните или напишите нам.
-                    </div>
+                    <div dangerouslySetInnerHTML={{__html: texts.deliveryContent.text}}></div>
                 </div>
                 <div className={styles.item}>
                     <img src={deliveryRus} alt="По России"/>
-                    <div>
-                        <strong>Доставка по России</strong> <br/>
-                        Заказ товара производится <strong>по телефону</strong>, необходимо согласовать все необходимые характеристики товара, его стоимость и иную информацию. Далее выставляется счет на оплату. <br/>
-                        Исходя из Вашего статуса, необходимы следующие данные: <br/>
-                        <ol>
-                            <li>
-                                Если Вы <strong>физическое лицо:</strong> ФИО, адрес доставки и телефон.
-                            </li>
-                            <li>
-                                Если Вы <strong>юридическое лицо:</strong> реквизиты организации или ИП и телефон, по которому можно с Вами связаться.
-                            </li>
-                        </ol>
-                        После того, как Вы оплатили счет, мы производим доставку заказа до терминала транспортной компании в течение <strong>1-3 дней.</strong> Далее с Вами связывается сотрудник ТК для согласования точной стоимости услуг по доставке. Мы можем доставить заказ любой транспортной компанией, которой Вам будет удобно.
-                    </div>
+                    <div dangerouslySetInnerHTML={{__html: texts.deliveryRusContent.text}}></div>
                 </div>
             </article>
             <article>
@@ -60,9 +50,7 @@ const DeliveryPage = () => {
                 </h2>
                 <div className={styles.item + " " + styles.paymentItem}>
                     <img src={payment} alt=""/>
-                    <div>
-                        Оплата осуществляется безналично
-                    </div>
+                    <div dangerouslySetInnerHTML={{__html: texts.paymentContent.text}}></div>
                 </div>
             </article>
             <QueryBlock />

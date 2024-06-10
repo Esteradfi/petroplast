@@ -58,6 +58,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%; /* 23.4px */
+    white-space: pre-wrap;
 }
 
 .moreFeatures {

@@ -6,6 +6,7 @@ import {ProductsItem} from "../../redux/products-reducer";
 import PriceListItem from "./PriceListItem/PriceListItem";
 import arrow from "./../../assets/icons/arrow.svg";
 import PriceListCategory from "./PriceListCategory/PriceListCategory";
+import { Helmet } from 'react-helmet-async';
 
 const PriceListPage = () => {
     const products: any = useAppSelector(state => state.products.productsList);
@@ -23,14 +24,15 @@ const PriceListPage = () => {
         return acc;
     }, []);
 
-    console.log(sortedProducts)
-
-
     let sortedProductsCategory = sortedProducts.map((el: Array<ProductsItem>) => <PriceListCategory key={el[0]._id} category={el} />);
 
 
     return (
         <section className={"container "}>
+            <Helmet>
+                <title>{"Петропласт - Прайс-лист"}</title>
+                <meta name='description' content={"Петропласт - Прайс-лист"} />
+            </Helmet>
             <article className={"breadcrumbs"}>
                 <NavLink to="/">
                     Меню

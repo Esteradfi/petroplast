@@ -24,6 +24,16 @@ const Features = ({...props}) => {
                     Характеристики
                 </h3>
                 <ul className={styles.featuresList}>
+                    {
+                        product.article && <li className={styles.featuresItem}>
+                        <span>
+                            Артикул
+                        </span>
+                            <span>
+                            {product.article}
+                        </span>
+                        </li>
+                    }
                     <li className={styles.featuresItem}>
                         <span>
                             Цвет
@@ -124,16 +134,6 @@ const Features = ({...props}) => {
                         </span>
                             <span>
                             {product.quantityPerPackage + " шт"}
-                        </span>
-                        </li>
-                    }
-                    {
-                        product.article && isAllFeatures && <li className={styles.featuresItem}>
-                        <span>
-                            Артикул
-                        </span>
-                            <span>
-                            {product.article}
                         </span>
                         </li>
                     }

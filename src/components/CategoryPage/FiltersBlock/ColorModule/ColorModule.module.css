@@ -1,0 +1,80 @@
+.colorBlock {
+    max-height: 356px;
+    overflow-y: scroll;
+    padding-right: 9px;
+}
+
+.colorBlock::-webkit-scrollbar {
+    width: 8px; /* ширина скроллбара */
+}
+
+.colorBlock::-webkit-scrollbar-thumb {
+    background-color: #AFACAC66; /* цвет скроллбара */
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.colorBlock::-webkit-scrollbar-thumb:hover {
+    background-color: #B0B0B0;
+}
+
+.colorBlock::-webkit-scrollbar-thumb:active {
+    background-color:#B0B0B0;
+}
+
+.colorBlock::-webkit-scrollbar-track {
+    background: #F0EFEF; /* цвет трека скроллбара */
+}
+
+.buttonsBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 9px;
+}
+
+.colorReset, .colorSave {
+    margin-top: 20px;
+    padding: 12px 0;
+    border-radius: 10px;
+    width: 47%;
+    /* Drop shadow default */
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.colorReset {
+    background: #F0EFEF;
+    color: var(--dark-grey, #505050);
+}
+
+.colorSave {
+    background: #FF6600;
+    color: #FFFFFF;
+}
+
+.colorSave:hover {
+    background: #FF822F;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.colorSave:active {
+    background: #F96E42;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.colorReset:hover {
+    background: #AFACAC66;
+    /* Drop shadow hover 5 */
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.colorReset:active {
+    background: #AFACAC66;
+    /* Drop shadow default */
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
