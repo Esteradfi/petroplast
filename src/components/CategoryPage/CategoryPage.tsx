@@ -1,18 +1,17 @@
-import styles from "./CategoryPage.module.css";
+import { useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import arrow from "../../assets/icons/arrow.svg";
+import { getGalleryThunk } from "../../redux/categories-reducer";
+import { clearAllFilters, setProducts } from "../../redux/filters-reducer";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { ProductsItem, setSelectedCategoryProducts, sortVolumeProducts } from "../../redux/products-reducer";
 import QueryBlock from "../common/QueryBlock/QueryBlock";
 import PrivilegeBlock from "../MainPage/PrivilegeBlock/PriveilegeBlock";
-import {NavLink, useLocation} from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-import {useEffect} from "react";
-import {useAppDispatch, useAppSelector} from "../../redux/hooks";
-import {ProductsItem, setSelectedCategoryProducts, sortVolumeProducts} from "../../redux/products-reducer";
-import VolumeGroup from "./VolumeGroup/VolumeGroup";
-import arrow from "../../assets/icons/arrow.svg";
-import { Helmet } from 'react-helmet-async';
+import styles from "./CategoryPage.module.css";
 import FiltersBlock from "./FiltersBlock/FiltersBlock";
-import {getGalleryThunk} from "../../redux/categories-reducer";
-import {clearAllFilters, setProducts} from "../../redux/filters-reducer";
 import ProductItem from "./VolumeGroup/ProductItem/ProductItem";
+import VolumeGroup from "./VolumeGroup/VolumeGroup";
 
 const CategoryPage = () => {
     const dispatch = useAppDispatch();
@@ -62,6 +61,8 @@ const CategoryPage = () => {
     if (filteredProducts) {
         filteredProductsItems = filteredProducts.map(((el: ProductsItem) => <ProductItem key={el._id} item={el} />));
     }
+
+    console.log(filteredProducts);
 
     return (
         <section>

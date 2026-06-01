@@ -1,6 +1,6 @@
+import { NavLink, useLocation } from "react-router-dom";
+import { formatNumber } from "../../../../utils/formatPrice";
 import styles from "./ProductItem.module.css";
-import {formatNumber} from "../../../../utils/formatPrice";
-import {NavLink, useLocation} from "react-router-dom";
 
 const ProductItem = ({...el}) => {
     let location = useLocation().pathname;

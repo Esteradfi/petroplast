@@ -1,5 +1,5 @@
-import type {PayloadAction} from '@reduxjs/toolkit';
-import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import $api from '../http';
 
 
